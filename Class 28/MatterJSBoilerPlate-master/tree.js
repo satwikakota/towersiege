@@ -1,8 +1,9 @@
-class Ground{
+class Tree{
     constructor(x,y,width,height) {
       var options = {
-          isStatic: false
+          isStatic: true
       }
+      this.image=loadImage("sprites/sprites/tree.png"); 
       this.body = Bodies.rectangle(x,y,width,height,options);
       this.width = width;
       this.height = height;
@@ -11,9 +12,9 @@ class Ground{
     display(){
       push()
       var pos =this.body.position;
-      rectMode(CENTER);
-      fill("brown");
-      rect(pos.x, pos.y, this.width, this.height);
+      imageMode(CENTER);
+      fill("green");
+      image(this.image,pos.x,pos.y,this.width,this.height);
       pop(); 
     }
   };

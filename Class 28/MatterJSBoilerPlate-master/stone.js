@@ -1,12 +1,12 @@
 class Stone{
     constructor(x,y){
         var options= {
-            isStatic:false, 
+            isStatic:true, 
             restitution:0,
             friction:1,
             density:1.2
         } 
-        this.image=loadImage("sprites\sprites/stone.png"); 
+        this.image=loadImage("sprites/sprites/stone.png"); 
         this.body = Bodies.circle(x,y,70,options);
         this.radius= 70
         World.add(world, this.body);
@@ -21,6 +21,7 @@ class Stone{
         fill("black");
         image(this.image,0,0,this.radius,this.radius);
         pop();
+        
     }
 
 }
